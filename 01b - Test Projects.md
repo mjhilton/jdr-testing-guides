@@ -75,6 +75,6 @@
 - Webdriver-js is a javascript binding to Selenium WebDriver, which gives you APIs to control and read fully-running websites in a variety of browsers
 - PhantomJS is a "headless" browser that provides much faster browser-driving than Selenium, but not 100% true-world
 - Nightwatch.js is combined test runner, and more modern Selenium binding based on the W3C WebDriver API
-- Protractor is a wrapper around PhantomJS that also provides test running and assertions
+- Protractor is an Angular-optimised wrapper around PhantomJS, which is also a test runner and provides and assertions
 - faker.js generates realistic-looking but random data based on categories like firstname, lastname, address, email etc
 - Chance generates type-based random data, and isn't intended to be real-world realistic
