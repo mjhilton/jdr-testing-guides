@@ -55,9 +55,12 @@
 | testdouble | ✖         | ✅                | ✅                    | ✖                | ✖                  | ✖     | ✖  |
 | enzyme    | ✖          | ✖                 | ✅                    | ✖                | ✖                  | 🔳    | 🔳 |
 | webdriver-js | ✖       | ✖                 | ✖                     | ✖                | ✖                  | ✅    | ✖  |
+| PhantomJS | ✖          | ✖                 | ✖                     | ✖                | ✖                  | ✅    | ✖  |
 | Nightwatch.js | ✅     | ✅                | ✖                     | ✖                | ✖                  | ✅    | ✖  |
+| Protractor | ✅        | ✅                | ✖                     | ✖                | ✖                  | ✅    | ✖  |
 | faker.js | ✖           | ✖                 | ✖                     | ✅               | ✖                  | ✖     | ✖  |
 | Chance   | ✖           | ✖                 | ✖                     | ✅               | ✖                  | ✖     | ✖  |
+
 
 - Mocha is a Javascript test runner with lots of extension points
 - Karma is a Javascript test runner that executes Javascript tests using a real DOM hosted in a browser, but you can't drive the browser like Selenium can
@@ -70,7 +73,8 @@
 - TestDouble is a mocking library, with ideas quite similar to compiled languages' mocking libraries - doesn't distinguish bewteen stubs/mocks/spies. Contains an assertion capability to verify calls happened as expected.
 - Enzyme is a React-focused HTML renderer for testing your React components. It provides an assertion syntax specific to testing React rendering.
 - Webdriver-js is a javascript binding to Selenium WebDriver, which gives you APIs to control and read fully-running websites in a variety of browsers
+- PhantomJS is a "headless" browser that provides much faster browser-driving than Selenium, but not 100% true-world
 - Nightwatch.js is combined test runner, and more modern Selenium binding based on the W3C WebDriver API
+- Protractor is a wrapper around PhantomJS that also provides test running and assertions
 - faker.js generates realistic-looking but random data based on categories like firstname, lastname, address, email etc
-- Chance generates type-based random data, and isn't intended to be real-world realistic. More of a randomiser.
-
+- Chance generates type-based random data, and isn't intended to be real-world realistic
