@@ -56,6 +56,8 @@
 | enzyme    | ✖          | ✖                 | ✅                    | ✖                | ✖                  | 🔳    | 🔳 |
 | webdriver-js | ✖       | ✖                 | ✖                     | ✖                | ✖                  | ✅    | ✖  |
 | Nightwatch.js | ✅     | ✅                | ✖                     | ✖                | ✖                  | ✅    | ✖  |
+| faker.js | ✖           | ✖                 | ✖                     | ✅               | ✖                  | ✖     | ✖  |
+| Chance   | ✖           | ✖                 | ✖                     | ✅               | ✖                  | ✖     | ✖  |
 
 - Mocha is a Javascript test runner with lots of extension points
 - Karma is a Javascript test runner that executes Javascript tests using a real DOM hosted in a browser, but you can't drive the browser like Selenium can
@@ -69,4 +71,6 @@
 - Enzyme is a React-focused HTML renderer for testing your React components. It provides an assertion syntax specific to testing React rendering.
 - Webdriver-js is a javascript binding to Selenium WebDriver, which gives you APIs to control and read fully-running websites in a variety of browsers
 - Nightwatch.js is combined test runner, and more modern Selenium binding based on the W3C WebDriver API
+- faker.js generates realistic-looking but random data based on categories like firstname, lastname, address, email etc
+- Chance generates type-based random data, and isn't intended to be real-world realistic. More of a randomiser.
 
