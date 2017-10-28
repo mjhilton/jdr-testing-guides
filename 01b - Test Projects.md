@@ -61,7 +61,6 @@
 | faker.js | ✖           | ✖                 | ✖                     | ✅               | ✖                  | ✖     | ✖  |
 | Chance   | ✖           | ✖                 | ✖                     | ✅               | ✖                  | ✖     | ✖  |
 
-
 - Mocha is a Javascript test runner with lots of extension points
 - Karma is a Javascript test runner that executes Javascript tests using a real DOM hosted in a browser, but you can't drive the browser like Selenium can
 - Jest is all things to all people
@@ -78,3 +77,19 @@
 - Protractor is an Angular-optimised wrapper around PhantomJS, which is also a test runner and provides and assertions
 - faker.js generates realistic-looking but random data based on categories like firstname, lastname, address, email etc
 - Chance generates type-based random data, and isn't intended to be real-world realistic
+
+# Creating a test project
+- Will vary depending on which framework you use
+- In compiled languages, you'd usually create a separate project which specifically contains tests only, and references the "production" projects
+- In Javascript land, you usually intermingle them but keep tests separated using a `/tests/` folder
+- For this workshop, we're going to use a combination of libraries. Realistically, most projects will use a number of different ones rather than something like Jest which tries to do everything.
+  - Test Runner: Mocha
+  - Assertion Library: Chai
+  - Mock/Spy Library: Sinon
+  - Driver: webdriver-js
+
+---
+⌨ Practical - Set up a test framework in an existing app
+---
+
+
