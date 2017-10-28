@@ -2,4 +2,3 @@
 # Maintaining tests
 # Deleting/ignoring tests
 # Managing test data
-# Behaviour-Driven Development (BDD)
