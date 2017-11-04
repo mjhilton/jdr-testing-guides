@@ -48,7 +48,10 @@
 - When testing, it's important to identify dependencies in your code: things where you don't control the result/outcome
 - If you want reliable test, you need to control all the inputs so you can be sure you'll get the same output
 
-## Dependency injection
+## Stubs/Mocks (Javascript)
+
+
+## Dependency injection (Compiled languages)
 - Pattern designed to deal with this problem, and help you write more modular code
 - Don't create things you depend on: let them be passed to you by whoever's consuming your code
 - Example of forexController using Dependency Injection instead:
