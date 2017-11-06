@@ -1,4 +1,8 @@
 ## Getting Selenium up and running:
+`git checkout master`
+
+`git checkout Prac06-StartPoint -b Prac06`
+
 1. We're going to need some new packages to get this thing running
 1. Add `webdriverjs` and `chromedriver` as dev dependencies
 1. Create a new test file where we'll get a browser up and running, controlled by our test code
@@ -28,4 +32,7 @@
 
 ## Interacting with our application
 1. We now need to use the same techniques from the interaction tests to ensure we have a server up and running that we can point Selenium at.
-1. Its useful to split your unit tests out from your slower running tests. You might want 3 different run tasks, one for each, or just two: fast and slow
+1. It's useful to split your unit tests out from your slower running tests. You might want 3 different run tasks, one for each, or just two: fast and slow
+1. When writing tests with Selenium, you'll want to use the `By` class to specify different ways to find elements on the page eg `By.tagName("img")` or `By.id("elementId")`
+1. Selenium also has a few core accessor methods: `findElement` returns the first or single matching element found; `findElements` returns an array of all matches.
+1. Once you've got an element, you can interact with it by calling methods like `click()` for clickable elements, or `sendKeys("text to input")` for textboxes.
