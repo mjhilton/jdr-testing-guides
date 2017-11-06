@@ -1,7 +1,8 @@
 *App same as 01b, contains test libraries and an empty `calculator-tests.js` file*
 
-`git reset --hard HEAD`
-`git checkout Practical-02-StartPoint`
+`git checkout master`
+
+`git checkout Prac02-StartPoint -b Prac02`
 
 ## First unit test
 1. Write a first test:
@@ -23,7 +24,13 @@
     - http://chaijs.com/#content
     - Try tags `Practical-02-ChaiAssert`, `Practical-02-ChaiExpect`, `Practical-02-ChaiShould`
 
+## Debugging our tests
+1. VSCode supports debugging of all code including Javascript unit tests, but you need to tell it how to launch
+1. We won't go into deep details of how this works, but VSCode will help you out with a lot of it. `Debug -> Add Configurations` will create `.vscode\launch.json` if it doesn't exist, and will prompt you to add tasks it knows about. There's one called `Node.js: Mocha Tests`. Use that.
+1. Now when you press F5, the tests will launch and your Debug Console will show the outputs. You can also set breakpoints and you'll be able to debug into both the test and production code.
+
 ## Edge cases
 1. How about an edge case: adding 0 to 0?
 1. Write another test for if a non-number is passed in. What happens? What would you expect to happen?
 1. Go ahead and add a basic test for multiply, divide and subtract
+
