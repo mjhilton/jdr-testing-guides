@@ -3,7 +3,7 @@
 - Frequently our code has dependencies: external things it relies on to get the job done
 - For example, you've got a function that relies on a service which returns currency foreign-exchange values, to do a currency conversion:
     ```
-    require('OzForex');
+    var OzForexCurrencyService = require('OzForex');
 
     function forexController() {
         var currencyService = new OzForexCurrencyService();

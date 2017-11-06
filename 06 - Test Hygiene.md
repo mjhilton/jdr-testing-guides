@@ -99,7 +99,6 @@
 - Another reason for one assertion per test: state should never be shared between tests!
 - Shared state can cause bugs in 
 - Every test should perform its own setup from scratch
-- 
 
 # Other guidance
 - Never put logic in tests: then you have potential for buggy tests
