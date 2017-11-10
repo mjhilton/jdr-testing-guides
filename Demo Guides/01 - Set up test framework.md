@@ -36,11 +36,11 @@ None
     - Open `package.json`
     - Find the `scripts` array
     - Ensure it contains a test script, which executes mocha, like this: 
-    ```
-    "scripts": [
-        "test": "mocha"
-    ]
-    ```
+        ```javascript
+        "scripts": [
+            "test": "mocha"
+        ]
+        ```
 1. Create an empty test file under the `test` folder
     - Call it `caclculator-tests.js`
 1. Run `npm test` and ensure the result is green/passing
