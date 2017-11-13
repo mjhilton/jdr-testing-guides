@@ -62,3 +62,5 @@
 # Test reliability
 - Everything in testing is about controlling inputs, performing actions and asserting in outputs
 - For your tests to be reliable, they need to be written in a way that things aren't changing underneath them
+
+# Which locators to use

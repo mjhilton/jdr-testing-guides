@@ -1,4 +1,7 @@
 # Spies - Interaction Testing
+`git checkout master`
+
+`git checkout Prac06-StartPoint -b Prac06`
 
 1. Spies let you record calls to a fake object/method, and perform assertions on the call: how many times, which arguments etc
 1. Works very similarly to stubbing, but will allow the actual method to be called

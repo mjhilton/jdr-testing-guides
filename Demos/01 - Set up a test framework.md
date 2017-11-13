@@ -1,5 +1,6 @@
 *App contains a basic Javascript class for a calculator with add, subtract, multiply, divide*
 
+`git clone https://github.com/juniordevio/testing-testing-123`
 `git checkout Prac01-StartPoint -b Prac01`
 
 1. Pull the practicals repository from `https://github.com/juniordevio/testing-testing-123`

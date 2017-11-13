@@ -5,8 +5,8 @@
     ```
     var OzForexCurrencyService = require('OzForex');
 
-    function forexController() {
-        var currencyService = new OzForexCurrencyService();
+    function forexController(OzForexCurrencyService) {
+        var currencyService = new ();
         
         function convertUSDtoAUD(usdAmount) {
             // Today's exchange rate is 0.76
@@ -90,7 +90,7 @@
 
         // Assert
         it('Should equal AU$7.60', function() {
-            assert.eq(expectedResult, result);
+            assert.equal(expectedResult, result);
         });
     });
     ```

@@ -37,7 +37,7 @@
 1. We'll be using Sinon as our stubbing library: `npm install sinon --save-dev`
 1. We need two things: a reference to Sinon, and a reference to the library we want to stub the results of. Go ahead and require both Sinon and the HttpClient at the top of the test file.
 1. What we want to achieve: control the return result of a call to the API, so we can specify the returned salary value:
-    ```
+    ```javascript
     describe("Salary service without hitting the real API", function() {
         beforeEach(function() {
             sinon.stub(httpClient, "get");

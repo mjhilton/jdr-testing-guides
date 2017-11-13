@@ -6,13 +6,18 @@
 
 ## First unit test
 1. Write a first test:
-    ```
+    ```javascript
     var assert = require('assert');
     var calculator = require('../src/calculator');
+    var chai = require('chai');
+    chai.should();
 
     describe('Using the calculator to add 1 to 2', function() {
         it('Should return 3' {
-            assert.equal(3, calculator.add(1, 2));
+            var expectedResult = 3;
+            var actualResult = calculator.add(1,2)
+            
+            actualResult.should.equal(expectedResult);
         });
     });
     ```

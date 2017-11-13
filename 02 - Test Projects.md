@@ -1,5 +1,5 @@
 # Components of a test project
-
+*Flesh out items from here into terminology*
 ## For all tests
 - Test Runner
   - Discovers tests in your tests project
@@ -22,6 +22,7 @@
   - A mock or stub are really the same thing
     - Some argue that a stub object will provide default return values where a mock requires return values to be specified
     - Whatever. They're basically the same, no need for distinction
+*Remove this bit*
 - Spy Library
   - Javascript concept very similar to a mock or a stub. A "spy" is a fake object that records calls to methods and lets you assert on them
   - Really a subset of mocks/stubs
@@ -35,6 +36,7 @@
   - Library that gives you an API to interact with a browser
   - Simulates clicks and inspects element values to get as close to a user interaction as possible
   - Realistically, Selenium is the main Driver out there
+*Kill off the DSL talk*
 - DSL
   - Domain-specific language
   - A library that you code on top of the Driver, which gives you a much more natural way to interact with your app, using concepts from the app itself rather than browser elements

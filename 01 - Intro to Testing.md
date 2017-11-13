@@ -83,3 +83,7 @@
   - Some of these tests may only be valuable for the design stage
   - When you zoom out a bit, tests will likely be quite closely tied to implementation
 - Always make sure you're stepping back every few hours and revisiting the business goals/acceptance criteria
+
+----
+
+----

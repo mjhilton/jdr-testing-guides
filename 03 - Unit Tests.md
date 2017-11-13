@@ -42,6 +42,7 @@
         });
     });
     ```
+
 - When this test runs, the assertion library will verify that the actual result is the same as the expected result. If they match, it will do nothing and the test will complete without error. The test framework will report the test as passing or "green".
 - If the actual doesn't match the expected, the assert call will throw an exception with details of what failed. The test framework will catch this exception and report the test as failing or "red", and provide details of the failure based on the exception thrown.
 
@@ -53,13 +54,13 @@
     ```
     describe('Using the calculator to add 0 to 0', function() {
         var calculator = new calculator();
-        var number1 = 0;
-        var number2 = 0;
-        var expectedResult = 0;
+        var number1 = 1;
+        var number2 = 2;
+        var expectedResult = 3;
 
         var result = calculator.add(number1, number2);
 
-        it('Should return 0' {
+        it('Should return 0', function() {
             assert.eq(expectedResult, result);
         });
     });
