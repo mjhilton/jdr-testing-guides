@@ -28,9 +28,9 @@ None
 ---
 
 ## Practical steps
-1. Install Mocha and add it as a dev dependency for our project:
+1. Install Mocha and add it as a dev dependency for our project
     - `npm install --save-dev Mocha`
-1. Install Chai and add it as a dev dependency for our project:
+1. Install Chai and add it as a dev dependency for our project
     - `npm install --save-dev chai`
 1. Update your `package.json` so that mocha is executed when `npm test` is called
     - Open `package.json`

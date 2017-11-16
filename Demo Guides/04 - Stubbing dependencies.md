@@ -7,9 +7,9 @@
 * Identify dependencies to be controlled when testing production code
 * Install a stub library & get access to it in your test code
 * Stub out a method on a dependency to control its return value
-* Use test set-up and tear-down hooks to perform repetitive tasks
 
 ## Extensions
+* Use test set-up and tear-down hooks to perform repetitive tasks
 * Write a test for code with multiple dependencies
 
 ## Set-up steps
@@ -22,3 +22,49 @@ Same pattern as previous pracs
 ---
 
 ## Practical Steps
+1. Install Sinon and add it as a dev dependency for our project
+    - `npm install sinon --save-dev`
+1. We need to write some tests for `pet-service.js`. Identify the dependency to be stubbed.
+    - At the top of `pet-service.js`, it requires `http-client.js`
+    - `pet-service` uses `http-client` makes a call off to an external API
+    - To test that quickly and reliably we need to stub the `http-client`
+1. Create a new test file for `pet-service.js`
+    - Create a new file `test\pet-service-tests.js`
+1. Get a reference to the code we're testing
+    - `var petService = require('../src/pet-service');`
+1. Get references to Sinon and HttpClient
+    - `var sinon = require('sinon');`
+    - `var httpClient = require('../src/http-client');`
+1. Add a describe block for PetService
+    - `describe('PetService', function() { ... });`
+1. Nest a describe block for getting pet information
+    - `describe('when retrieving pet details', function() { ... });`
+1. Add an it block for testing the transformation of the JSON result
+    - `it('returns a nicely consumable JSON result', function() { ... });`
+1. Find out what the JSON result from the external API is going to look like
+    - Get `https://juniordev-refactor.azurewebsites.net/api/Pets?petName=Beaglier`
+    - Inspect the structure of the JSON result
+1. Create a mock return result for test purposes
+    ```javascript
+    var externalApiJsonResult = {
+        "AnimalVariety": "Dog",
+        "AnimalInformation": "Beagliers are beautiful",
+        "ReferenceSource": "https://en.wikipedia.org/wiki/Beaglier",
+        "Base64EncodedVisualDepiction": "base64dog"
+    };
+    ```
+1. Instruct sinon to stub the `get` method on `httpClient`, and resolve its promise with our fake result
+    - `sinon.stub(httpClient, 'get');`
+    - `httpClient.get.resolves(externalApiJsonResult);`
+1. Call the service and assert on the result
+    ```javascript
+    return petService.getPetDetails("Beaglier")
+        .then(result => {
+            result.should.have.property("info").which.equals("Beagliers are beautiful");
+            result.should.have.property("source").which.equals("https://en.wikipedia.org/wiki/Beaglier");
+            result.should.have.property("image").which.equals("base64dog");
+        });
+    ```
+1. Instruct sinon to release the stub and restore the original functionality
+    - `httpClient.get.restore();`
+1. Run the test and see a fast, green result
