@@ -11,7 +11,7 @@
 * Use tear-down hooks to clean up state left behind by the test
 
 ## Extensions
-* Write integration tests for all APIs exposed by the system :)
+* Write integration tests for all APIs exposed by the system, stubbing things if necessary :)
 
 ## Set-up steps
 Same pattern as previous pracs
@@ -61,7 +61,7 @@ Same pattern as previous pracs
     }
     ```
 1. Create an integration test file
-    - Add a new file `test/integration/api-tests.json`
+    - Add a new file `test/integration/api-tests.js`
 1. Make the `app.js` exportable and get a reference to it in
     - Open `app.js`
     - At the bottom of the file, add a line to export the `app` once it's spun up: `module.exports = app;`
