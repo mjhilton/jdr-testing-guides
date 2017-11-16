@@ -1,5 +1,8 @@
 # Practical 4 - Stubbing Dependencies
 
+## Time allocation
+25 minutes
+
 ## Objectives
 * Identify dependencies to be controlled when testing production code
 * Install a stub library & get access to it in your test code
@@ -16,3 +19,6 @@ Same pattern as previous pracs
 1. Check out the Start Point for Prac 4: `git checkout Prac04-StartPoint`
 1. Create a branch to make your changes on without impacting the main repo: `git checkout -b Prac04`
 
+---
+
+## Practical Steps
