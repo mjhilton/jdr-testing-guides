@@ -29,6 +29,19 @@ None
 
 ## Practical steps
 1. Install Mocha and add it as a dev dependency for our project
+1. Install Chai and add it as a dev dependency for our project
+1. Update your `package.json` so that mocha is executed when `npm test` is called
+1. Create an empty test file under the `test` folder
+1. Run `npm test` and ensure the result is green/passing
+
+### Solutions
+<details>
+<summary>
+Here's a step-by-step walkthrough of the practical steps, for if you get stuck :)
+</summary>
+<p>
+
+1. Install Mocha and add it as a dev dependency for our project
     - `npm install --save-dev Mocha`
 1. Install Chai and add it as a dev dependency for our project
     - `npm install --save-dev chai`
@@ -44,3 +57,5 @@ None
 1. Create an empty test file under the `test` folder
     - Call it `caclculator-tests.js`
 1. Run `npm test` and ensure the result is green/passing
+</p>
+</details>
