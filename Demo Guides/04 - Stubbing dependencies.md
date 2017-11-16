@@ -6,11 +6,12 @@
 ## Objectives
 * Identify dependencies to be controlled when testing production code
 * Install a stub library & get access to it in your test code
-* Stub out a method on a dependency to control its return value
+* Learn how to stub a method on a dependency and control its return value
+* Write a passing test using a stubbed dependency
 
 ## Extensions
-* Use test set-up and tear-down hooks to perform repetitive tasks
-* Write a test for code with multiple dependencies
+* Refactor repetatives tasks out into test set-up (`beforeEach`) and tear-down (`afterEach`) hooks
+* Write tests for an Angular controller that uses $http, and figure out how to control the dependency
 
 ## Set-up steps
 Same pattern as previous pracs

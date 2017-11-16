@@ -10,7 +10,7 @@
 * Set up VSCode to debug your code
 * Debug a failing test and get it passing
 
-## Extensions
+### Extensions
 None
 
 ## Set-up steps

@@ -10,7 +10,7 @@
 * Install an assertion library
 * Run the "test suite" with a green result
 
-## Extensions
+### Extensions
 None
 
 ## Set-up steps
