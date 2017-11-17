@@ -1,7 +1,0 @@
-- Black box
-- Code contract
-- System Under Tests (SUT)
-- Test framework
-- Assertion
-- Assertion library
-- Fakes, stubs, mocks, spies
