@@ -1,8 +1,5 @@
 # Practical 4 - Stubbing Dependencies
 
-## Time allocation
-25 minutes
-
 ## Objectives
 * Identify dependencies to be controlled when testing production code
 * Install a stub library & get access to it in your test code

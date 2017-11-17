@@ -1,8 +1,5 @@
 # Practical 3 - Debugging Test Code
 
-## Time allocation
-10 minutes
-
 ## Objectives
 * Learn how to debug test code
 * Set up VSCode to debug your code

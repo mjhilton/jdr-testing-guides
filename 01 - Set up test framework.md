@@ -1,8 +1,5 @@
 # Practical 1 - Set up a test framework
 
-## Time allocation
-20 minutes
-
 ## Objectives
 * Create a test project/framework for an existing app
 * Install a test runner

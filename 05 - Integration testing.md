@@ -1,8 +1,5 @@
 # Practical 5 - Integration testing
 
-## Time allocation
-30 minutes
-
 ## Objectives
 * Ensure integration tests are kept separate from unit tests
 * Spin up a live copy of the system from your test code

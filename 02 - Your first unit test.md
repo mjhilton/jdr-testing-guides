@@ -1,8 +1,5 @@
 # Practical 2 - Your first unit test
 
-## Time allocation
-30 minutes
-
 ## Objectives
 * Get access to your production code & test libraries within your test code
 * Use `describe` and `it` blocks to create a test fixture
