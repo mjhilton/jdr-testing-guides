@@ -31,6 +31,22 @@
 
 ## Practical Steps
 1. Use node's `require` to get access to the NameToNumberService for your test code
+1. Also get acces to Chai to perform assertions
+1. Add a top-level `describe` block to describe the thing we're testing
+1. Add a second-level `describe` block to describe the scenario we're testing
+1. Add an `it` block to create your first test case
+1. Inside the `it` block, write code to set up test data and call the service
+1. Add an assertion to actually verify the result
+1. Run the test and see a green result
+
+### Solutions
+<details>
+<summary>
+Here's a step-by-step walkthrough of the practical steps, for if you get stuck :)
+</summary>
+<p>
+
+1. Use node's `require` to get access to the NameToNumberService for your test code
     - `var nameToNumberService = require('../src/name-to-number-service');`
 1. Also get acces to Chai to perform assertions
     - `var chai = require('chai');`
@@ -52,3 +68,5 @@
     - `actualBucket.should.equal(expectedBucket);`
 1. Run the test and see a green result
     - `npm test`
+</p>
+</details>

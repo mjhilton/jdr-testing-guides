@@ -22,6 +22,19 @@ Same pattern as previous pracs
 
 ## Practical Steps
 1. Run the test suite
+1. Add a new Launch Configuration to your project in VSCode, to launch Mocha with the debugger attached
+1. Set a breakpoint in an existing failing test
+1. Debug the test
+1. Find the problems and fix them
+
+### Solutions
+<details>
+<summary>
+Here's a step-by-step walkthrough of the practical steps, for if you get stuck :)
+</summary>
+<p>
+
+1. Run the test suite
     - `npm test`
     - Notice there are failing tests
 1. Add a new Launch Configuration to your project in VSCode, to launch Mocha with the debugger attached
@@ -44,3 +57,5 @@ Same pattern as previous pracs
 1. Find the problems and fix them
     - One failing test is failing due to a problem with the test code itself. The number of buckets passed to the service is `10` but should be `1`
     - One failing test is failing due to a problem with the prod code. The first condition asserting a max value for number of buckets should use a `<=`, not `<`
+</p>
+</details>

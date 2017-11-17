@@ -24,6 +24,29 @@ Same pattern as previous pracs
 
 ## Practical Steps
 1. Install Sinon and add it as a dev dependency for our project
+1. We need to write some tests for `pet-service.js`. Identify the dependency to be stubbed.
+1. Create a new test file for `pet-service.js`
+1. Get a reference to the code we're testing
+1. Get references to Sinon and HttpClient
+1. Add a describe block for PetService
+1. Nest a describe block for getting pet information
+1. Add an it block for testing the transformation of the JSON result
+1. Find out what the JSON result from the external API is going to look like
+1. Create a mock return result for test purposes
+1. Instruct sinon to stub the `get` method on `httpClient`, and resolve its promise with our fake result
+1. Call the service and assert on the result
+1. Instruct sinon to release the stub and restore the original functionality
+1. Run the test and see a fast, green result
+1. Ensure that the actual `httpClient.get` method isn't being called
+
+### Solutions
+<details>
+<summary>
+Here's a step-by-step walkthrough of the practical steps, for if you get stuck :)
+</summary>
+<p>
+
+1. Install Sinon and add it as a dev dependency for our project
     - `npm install sinon --save-dev`
 1. We need to write some tests for `pet-service.js`. Identify the dependency to be stubbed.
     - At the top of `pet-service.js`, it requires `http-client.js`
@@ -71,3 +94,5 @@ Same pattern as previous pracs
 1. Run the test and see a fast, green result
 1. Ensure that the actual `httpClient.get` method isn't being called
     - You could set a breakpoint in the actual `get` method and debug, or add a `console.log` entry to the actual `get` method to ensure nothing is logged in the console during the test run
+</p>
+</details>

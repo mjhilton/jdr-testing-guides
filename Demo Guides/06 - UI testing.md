@@ -22,6 +22,24 @@ Same pattern as previous pracs
 
 ## Practical Steps
 1. Add `selenium-webdriver` and `chromedriver` as dev dependencies
+1. Create a new `automated-ui` folder
+1. Create new `package.json` and `launch.json` entry points for our UI tests
+1. Create a new test file for our UI tests
+1. Add a reference to our app to ensure it gets spun up
+1. Get access to `chromedriver` and `selenium-webdriver` in your test file
+1. Get a reference to webdriver's `By` and `until` utilities
+1. Ensure your tests start a Chrome instance and navigate to the app homepage before they run
+1. Add a new test that asserts the homepage has today's date on it
+1. Add another test that navigates to the Random page and requests a random pet match, and asserts that the correct text is displayed
+
+### Solutions
+<details>
+<summary>
+Here's a step-by-step walkthrough of the practical steps, for if you get stuck :)
+</summary>
+<p>
+
+1. Add `selenium-webdriver` and `chromedriver` as dev dependencies
     - `npm install selenium-webdriver --save-dev`
     - `npm install chromedriver --save-dev`
 1. Create a new `automated-ui` folder
@@ -81,6 +99,7 @@ Same pattern as previous pracs
         });
     });
     ```
+</p>
 
 ## Extenion Steps
 1. Write tests for the MatchMaker functionality

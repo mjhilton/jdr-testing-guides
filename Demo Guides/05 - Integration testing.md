@@ -25,6 +25,25 @@ Same pattern as previous pracs
 
 ## Practical Steps
 1. Push existing unit tests down into a "unit" folder within the "test" folder
+1. Create a new "integration" folder under the "test" folder
+1. Update the existing `package.json` and `launch.json` config for the new location
+1. Add new `package.json` and `launch.json` entries to run integration tests separately to unit tests
+1. Create an integration test file
+1. Make the `app.js` exportable and get a reference to it in
+1. Add placeholder `describe` and `it` blocks
+1. Run the integration tests and ensure the app was spun up
+1. Implement a test that calls the `/api/pets/generateMatch` API and asserts on the result
+1. Implement a test that calls the `/api/pets/random` API, and asserts on the history content directly from the database
+1. Add a tear-down hook to reset the app's state after each test
+
+### Solutions
+<details>
+<summary>
+Here's a step-by-step walkthrough of the practical steps, for if you get stuck :)
+</summary>
+<p>
+
+1. Push existing unit tests down into a "unit" folder within the "test" folder
     - Create a `test/unit` folder
     - Move existing tests into the new folder
     - Update any `require` references to our app's code to ensure their relative paths are still correct
@@ -99,3 +118,5 @@ Same pattern as previous pracs
         db.clear();
     });
     ```
+</p>
+</details>
