@@ -41,7 +41,24 @@ Here's a step-by-step walkthrough of the practical steps, for if you get stuck :
     - Debug Menu > Open Configurations
     - If it doesn't exist, this will create a `.vscode\launch.json` file, with a default "Launch" configuration. You might need to close a pop-up prompt to see this clearly. The default launch configuration doesn't do much right now, so delete it.
     - Press the "Add Configuration" button, bottom right
-    - Select `Node.js: Mocha Tests`
+    - Select `Node.js: Mocha Tests`. Result should end up like this:
+        ```javascript
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Mocha Tests",
+            "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+            "args": [
+                "-u",
+                "tdd",
+                "--timeout",
+                "999999",
+                "--colors",
+                "${workspaceFolder}/test"
+            ],
+            "internalConsoleOptions": "openOnSessionStart"
+        }
+        ```
 1. Set a breakpoint in an existing failing test
     - Open `name-to-number-service-tests.js`
     - Set a breakpoint by clicking just to the left of the line number in the VSCode editor; a filled red circle appears

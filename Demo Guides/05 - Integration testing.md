@@ -60,26 +60,26 @@ Here's a step-by-step walkthrough of the practical steps, for if you get stuck :
         - Linux/OSX: `NODE_ENV=test mocha --timeout 5000 test/integration/**/*.js`
         - Windows: `SET NODE_ENV=test& mocha --timeout 5000 test/integration/**/*.js`
     - Add a new Mocha configuration to `launch.json` which points to the `integration` folder:
-    ```javascript
-    {
-        "type": "node",
-        "request": "launch",
-        "name": "Integration Tests",
-        "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
-        "args": [
-            "-u",
-            "tdd",
-            "--timeout",
-            "5000",
-            "--colors",
-            "${workspaceFolder}/test/integration"
-        ],
-        "env": {
-            "NODE_ENV": "test"
-        },
-        "internalConsoleOptions": "openOnSessionStart"
-    }
-    ```
+        ```javascript
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Integration Tests",
+            "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+            "args": [
+                "-u",
+                "tdd",
+                "--timeout",
+                "5000",
+                "--colors",
+                "${workspaceFolder}/test/integration"
+            ],
+            "env": {
+                "NODE_ENV": "test"
+            },
+            "internalConsoleOptions": "openOnSessionStart"
+        }
+        ```
 1. Create an integration test file
     - Add a new file `test/integration/api-tests.js`
 1. Make the `app.js` exportable and get a reference to it in
@@ -113,10 +113,10 @@ Here's a step-by-step walkthrough of the practical steps, for if you get stuck :
     ```
 1. Add a tear-down hook to reset the app's state after each test
     - Add an `afterEach()` function which calls `db.clear()`, like this:
-    ```javascript
-    afterEach(function() {
-        db.clear();
-    });
-    ```
+        ```javascript
+        afterEach(function() {
+            db.clear();
+        });
+        ```
 </p>
 </details>

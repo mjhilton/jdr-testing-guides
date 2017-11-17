@@ -1,7 +1,3 @@
-> *StartPoint note*: Remove error handling from prod code, remove tests
-
-> *EndPoint note*: ?Have refactored, nicer logic in prod code?
-
 # Practical 2 - Your first unit test
 
 ## Time allocation
