@@ -21,8 +21,8 @@ Same pattern as previous pracs
 ---
 
 ## Practical Steps
-1. Add `webdriverjs` and `chromedriver` as dev dependencies
-    - `npm install webdriverjs --save-dev`
+1. Add `selenium-webdriver` and `chromedriver` as dev dependencies
+    - `npm install selenium-webdriver --save-dev`
     - `npm install chromedriver --save-dev`
 1. Create a new `automated-ui` folder
     - New folder `test/automated-ui`
@@ -30,9 +30,14 @@ Same pattern as previous pracs
     - Follow equivalent steps from the Integration Testing prac for details
 1. Create a new test file for our UI tests
     - New file `test/automated-ui/browser-tests.js`
+1. Add a reference to our app to ensure it gets spun up
+    - `var app = require('../../app');`
 1. Get access to `chromedriver` and `selenium-webdriver` in your test file
     - `var chromedriver = require('chromedriver');`
     - `var webdriver = require('selenium-webdriver');`
+1. Get a reference to webdriver's `By` and `until` utilities
+    - `var by = webdriver.By;`
+    - `var until = webdriver.until;`
 1. Ensure your tests start a Chrome instance and navigate to the app homepage before they run
     ```javascript
     var driver;
@@ -48,7 +53,7 @@ Same pattern as previous pracs
     ```javascript
     describe("Spinning up our app", function() {
         it("should be greeted with today's date", function() {
-            return driver.findElement(By.id("todaysDate"))
+            return driver.findElement(by.id("todaysDate"))
                 .then((element) => element.getText())
                 .then((dateText) => dateText.should.equal(new Date().toDateString()));
         });
@@ -59,16 +64,16 @@ Same pattern as previous pracs
     describe("Randomiser", function() {
         describe("when randomly matching a pet", function() {
             beforeEach(function() {
-                return driver.findElement(By.name("random"))
+                return driver.findElement(by.name("random"))
                     .then(m => m.click())
-                    .then(() => driver.findElement(By.tagName("button")))
+                    .then(() => driver.findElement(by.tagName("button")))
                     .then(button => button.click())
-                    .then(() => driver.findElement(By.name("petInfo")))
+                    .then(() => driver.findElement(by.name("petInfo")))
                     .then(petInfo => driver.wait(until.elementIsVisible(petInfo)))
             });
 
             it("should find a match", function() {
-                return driver.findElement(By.name("matchResult"))
+                return driver.findElement(by.name("matchResult"))
                     .then(mr => driver.wait(until.elementIsVisible(mr)))
                     .then(mr => mr.getText())
                     .then(mrText => mrText.should.contain("Your perfect pet is a"));

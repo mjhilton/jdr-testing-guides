@@ -1,5 +1,3 @@
-> *StartPoint note*: Have a failing test due to bad test setup, and one due to incorrect prod code
-
 # Practical 3 - Debugging Test Code
 
 ## Time allocation
@@ -25,10 +23,10 @@ Same pattern as previous pracs
 ## Practical Steps
 1. Run the test suite
     - `npm test`
-    - Notice there's 2 failing tests
+    - Notice there are failing tests
 1. Add a new Launch Configuration to your project in VSCode, to launch Mocha with the debugger attached
     - Debug Menu > Open Configurations
-    - If it doesn't exist, this will create a `.vscode\launch.json` file, with a default "Launch" configuration that starts the Node app
+    - If it doesn't exist, this will create a `.vscode\launch.json` file, with a default "Launch" configuration. You might need to close a pop-up prompt to see this clearly. The default launch configuration doesn't do much right now, so delete it.
     - Press the "Add Configuration" button, bottom right
     - Select `Node.js: Mocha Tests`
 1. Set a breakpoint in an existing failing test
@@ -36,13 +34,13 @@ Same pattern as previous pracs
     - Set a breakpoint by clicking just to the left of the line number in the VSCode editor; a filled red circle appears
     - You can set the breakpoint either in the test code, or in the code being tested, depending on what you want to investigate
 1. Debug the test
-    - Open the debugging panel, 4th icon down in the left menu
-    - Ensure `Mocha Tests` is selected from the dropdown
+    - Open the debugging panel, (4th icon down in the left menu)
+    - Ensure `Mocha Tests` is selected from the dropdown directly to the left of the green Play button
     - Press F5, or the green Play button, or Debug > Start Debugging
     - The tests will run and code execution will stop where you've set your breakpoint
     - Inspect variable values by hovering over the variable, or using the Variables panel in the left menu
     - Progress the code by pressing F10 to step to the next line, or F11 to step into a function
     - Press F5 to allow the test run to continue executing (it will stop on any subsequent breakpoints)
-1. Find the problem and fix it
-    - One failing test is failing due to a typo in the test code itself
-    - One failing test is failing because there's some incorrect code that needs to be fixed
+1. Find the problems and fix them
+    - One failing test is failing due to a problem with the test code itself. The number of buckets passed to the service is `10` but should be `1`
+    - One failing test is failing due to a problem with the prod code. The first condition asserting a max value for number of buckets should use a `<=`, not `<`

@@ -12,6 +12,7 @@
 
 ## Extensions
 * Write integration tests for all APIs exposed by the system, stubbing things if necessary :)
+* Write a bash script to execute unit tests first, then integration tests
 
 ## Set-up steps
 Same pattern as previous pracs

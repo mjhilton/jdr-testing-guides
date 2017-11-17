@@ -11,7 +11,7 @@
 
 ## Extensions
 * Refactor repetatives tasks out into test set-up (`beforeEach`) and tear-down (`afterEach`) hooks
-* Write tests for an Angular controller that uses $http, and figure out how to control the dependency
+* Read up on how Angular handles dependency management and how you might control dependencies in this environment. This is much more similar to how static languages such as C# and Java manage dependencies.
 
 ## Set-up steps
 Same pattern as previous pracs
@@ -69,3 +69,5 @@ Same pattern as previous pracs
 1. Instruct sinon to release the stub and restore the original functionality
     - `httpClient.get.restore();`
 1. Run the test and see a fast, green result
+1. Ensure that the actual `httpClient.get` method isn't being called
+    - You could set a breakpoint in the actual `get` method and debug, or add a `console.log` entry to the actual `get` method to ensure nothing is logged in the console during the test run

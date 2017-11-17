@@ -1,4 +1,5 @@
 > *StartPoint note*: Remove error handling from prod code, remove tests
+
 > *EndPoint note*: ?Have refactored, nicer logic in prod code?
 
 # Practical 2 - Your first unit test
@@ -30,18 +31,18 @@
 
 ## Practical Steps
 1. Use node's `require` to get access to the NameToNumberService for your test code
-    - `var nameToNumberService = require('../../src/name-to-number-service');`
+    - `var nameToNumberService = require('../src/name-to-number-service');`
 1. Also get acces to Chai to perform assertions
     - `var chai = require('chai');`
 1. Add a top-level `describe` block to describe the thing we're testing
     - `describe('NameToNumber Service', function() { ... });`
 1. Add a second-level `describe` block to describe the scenario we're testing
-    - `describe('When splitting the alphabet into 4 buckets', function() { ... });`
+    - `describe('with 4 buckets', function() { ... });`
 1. Add an `it` block to create your first test case
-    - `it('should put Aaron in the first bucket', function() { ... });`
+    - `it('should put Alice in the first', function() { ... });`
 1. Inside the `it` block, write code to set up test data and call the service
     ```javascript
-    var inputName = "Aaron";
+    var inputName = "Alice";
     var buckets = 4;
     var expectedBucket = 1;
 

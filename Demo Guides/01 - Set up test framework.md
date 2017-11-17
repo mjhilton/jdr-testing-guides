@@ -32,7 +32,7 @@ None
 1. Install Chai and add it as a dev dependency for our project
 1. Update your `package.json` so that mocha is executed when `npm test` is called
 1. Create an empty test file under the `test` folder
-1. Run `npm test` and ensure the result is green/passing
+1. Run `npm test` and ensure the result is green/no errors: "0 passing"
 
 ### Solutions
 <details>
@@ -50,12 +50,12 @@ Here's a step-by-step walkthrough of the practical steps, for if you get stuck :
     - Find the `scripts` array
     - Ensure it contains a test script, which executes mocha, like this: 
         ```javascript
-        "scripts": [
+        "scripts": {
             "test": "mocha"
-        ]
+        }
         ```
 1. Create an empty test file under the `test` folder
-    - Call it `caclculator-tests.js`
-1. Run `npm test` and ensure the result is green/passing
+    - Call it `name-to-number-service-tests.js`
+1. Run `npm test` and ensure the result is green/no errors: "0 passing"
 </p>
 </details>
